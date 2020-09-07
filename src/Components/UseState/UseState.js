@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 
 const NumberChange = () => {
-    const [dhon , setDhon] =useState(0);
-        function handleClick (){
-            setDhon(dhon + 1);
+    const [click , setClick] =useState(0);
+        function increase (){
+            setClick(click + 1);
+        }
+
+        function decrease (){
+            setClick(click - 1)
         }
     return (
         <div>
-            <button onClick = {handleClick} >Click Me</button>
-             <h1>Number of click is {dhon}</h1>
+            <button onClick = {increase} >Increase</button>
+            <button onClick = {decrease}>Decrease</button>
+             <h1>Number of click is {click}</h1>
         </div>
     );
 };
